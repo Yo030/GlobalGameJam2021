@@ -3,7 +3,17 @@ guid: b12611603fd1dce45bcbcdfd8c5fe989
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pelota_blanco
+    second: {fileID: 2100000, guid: 3c2cbbd8dc97a034787b75f8c011724e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pelota_rojo
+    second: {fileID: 2100000, guid: feb34e6b206e11f43ad31c317c81214b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

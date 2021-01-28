@@ -3,7 +3,22 @@ guid: b2eb20129b95d9944a90605d4f78cf0a
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blanco
+    second: {fileID: 2100000, guid: 3c2cbbd8dc97a034787b75f8c011724e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: madera_cafe
+    second: {fileID: 2100000, guid: af418eaf219187d44b4d87621f6fb719, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pelota_rojo
+    second: {fileID: 2100000, guid: feb34e6b206e11f43ad31c317c81214b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
