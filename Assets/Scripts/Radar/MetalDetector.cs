@@ -33,7 +33,7 @@ public class MetalDetector : MonoBehaviour
     {
         if(BuriedObjectBeneath != null)
         {
-            DigScript.ShowDigUI(true);
+            //DigScript.ShowDigUI(true);
 
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -42,7 +42,7 @@ public class MetalDetector : MonoBehaviour
         }
         else
         {
-            DigScript.ShowDigUI(false);
+            //DigScript.ShowDigUI(false);
         }
     }
 
