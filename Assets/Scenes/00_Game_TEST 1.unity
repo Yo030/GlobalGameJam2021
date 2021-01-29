@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 19219315}
   - component: {fileID: 19219314}
   - component: {fileID: 19219313}
+  - component: {fileID: 19219317}
   m_Layer: 9
   m_Name: Capsule (6)
   m_TagString: Buried
@@ -345,6 +346,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19219317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19219312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &136691425
 GameObject:
   m_ObjectHideFlags: 3
@@ -431,6 +445,7 @@ GameObject:
   - component: {fileID: 141418748}
   - component: {fileID: 141418747}
   - component: {fileID: 141418746}
+  - component: {fileID: 141418750}
   m_Layer: 9
   m_Name: Capsule (7)
   m_TagString: Buried
@@ -515,6 +530,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &141418750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141418745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &143374784
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +716,7 @@ GameObject:
   - component: {fileID: 326415211}
   - component: {fileID: 326415210}
   - component: {fileID: 326415209}
+  - component: {fileID: 326415213}
   m_Layer: 9
   m_Name: Capsule (4)
   m_TagString: Buried
@@ -772,6 +801,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326415213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326415208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &409238444
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +826,7 @@ GameObject:
   - component: {fileID: 409238447}
   - component: {fileID: 409238446}
   - component: {fileID: 409238445}
+  - component: {fileID: 409238449}
   m_Layer: 9
   m_Name: Capsule (5)
   m_TagString: Buried
@@ -868,6 +911,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409238449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409238444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &442087642
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +936,7 @@ GameObject:
   - component: {fileID: 442087645}
   - component: {fileID: 442087644}
   - component: {fileID: 442087643}
+  - component: {fileID: 442087647}
   m_Layer: 9
   m_Name: Capsule (2)
   m_TagString: Buried
@@ -964,6 +1021,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442087647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442087642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &447324181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1345,7 @@ GameObject:
   - component: {fileID: 513670327}
   - component: {fileID: 513670326}
   - component: {fileID: 513670325}
+  - component: {fileID: 513670329}
   m_Layer: 9
   m_Name: Capsule (3)
   m_TagString: Buried
@@ -1359,6 +1430,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &513670329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513670324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &607447286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,6 +1769,7 @@ GameObject:
   - component: {fileID: 876975933}
   - component: {fileID: 876975932}
   - component: {fileID: 876975931}
+  - component: {fileID: 876975935}
   m_Layer: 9
   m_Name: Capsule (1)
   m_TagString: Buried
@@ -1769,6 +1854,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &876975935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876975930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &877228275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,6 +2205,7 @@ GameObject:
   - component: {fileID: 1274172452}
   - component: {fileID: 1274172451}
   - component: {fileID: 1274172450}
+  - component: {fileID: 1274172454}
   m_Layer: 9
   m_Name: Capsule (10)
   m_TagString: Buried
@@ -2191,6 +2290,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1274172454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274172449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &1294115430
 GameObject:
   m_ObjectHideFlags: 3
@@ -2823,7 +2935,6 @@ MonoBehaviour:
   - Name: Cofre
     GameObjectToSpawn: {fileID: 247581061}
     Prabability: 3
-  RandomObjectToSpawn: 0
 --- !u!4 &1588703671
 Transform:
   m_ObjectHideFlags: 0
@@ -3050,6 +3161,7 @@ GameObject:
   - component: {fileID: 1762598839}
   - component: {fileID: 1762598838}
   - component: {fileID: 1762598837}
+  - component: {fileID: 1762598841}
   m_Layer: 9
   m_Name: Capsule (8)
   m_TagString: Buried
@@ -3134,6 +3246,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762598841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762598836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &1808394586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,6 +3271,7 @@ GameObject:
   - component: {fileID: 1808394589}
   - component: {fileID: 1808394588}
   - component: {fileID: 1808394587}
+  - component: {fileID: 1808394591}
   m_Layer: 9
   m_Name: Capsule (9)
   m_TagString: Buried
@@ -3230,6 +3356,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1808394591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808394586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!850595691 &1844469136
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -3303,6 +3442,7 @@ GameObject:
   - component: {fileID: 1944922095}
   - component: {fileID: 1944922094}
   - component: {fileID: 1944922093}
+  - component: {fileID: 1944922097}
   m_Layer: 9
   m_Name: Capsule
   m_TagString: Buried
@@ -3387,6 +3527,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944922097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944922092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbc7d07b7fb0e3488b0b356ac318f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: 
 --- !u!1 &1988409350
 GameObject:
   m_ObjectHideFlags: 0
