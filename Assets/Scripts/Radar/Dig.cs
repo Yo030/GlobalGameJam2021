@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class Dig : MonoBehaviour
 {
     [SerializeField] private GameObject DigUI;
-
+    /*
     public void ShowDigUI(bool _show)
     {
         DigUI.SetActive(_show);//Show UI
-    }
+    }*/
 
     public void DiscoverTresure(GameObject _buriedobject)
     {
