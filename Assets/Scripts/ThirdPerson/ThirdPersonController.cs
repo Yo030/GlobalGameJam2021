@@ -9,6 +9,17 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField] private float TurnTime;
     private float TurnVelocity;
 
+
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
+    Vector3 gravityVelocity;
+    public float gravity = -9.81f;
+
+    bool isGrounded;
+
+
     private void Start()
     {
         PlayerController = GetComponent<CharacterController>();
@@ -16,6 +27,14 @@ public class ThirdPersonController : MonoBehaviour
 
     private void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isGrounded && gravityVelocity.y < 0)
+        {
+            gravityVelocity.y = -2f;
+        }
+
+
         float _horizontal = Input.GetAxisRaw("Horizontal");
         float _vertical = Input.GetAxisRaw("Vertical");
         Vector3 _direction = new Vector3(_horizontal, 0f, _vertical).normalized;
@@ -27,5 +46,10 @@ public class ThirdPersonController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, _angle, 0);
             PlayerController.Move(_direction * PlayerSpeed * Time.deltaTime);
         }
+
+
+
+        gravityVelocity.y += gravity * Time.deltaTime;
+        PlayerController.Move(gravityVelocity * Time.deltaTime);
     }
 }
