@@ -60,13 +60,20 @@ public class WalkingAIController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        GoToZone(zonas[UnityEngine.Random.Range(0, zonas.Count)]);
+    }
+
     private void Update()
     {
-        //TESTING
+        //TESTING 
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GoToZone(zonas[UnityEngine.Random.Range(0, zonas.Count)]);
         }
+        */
     }
 
     public void GoToZone(AIZone zone)
