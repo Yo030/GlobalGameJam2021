@@ -1809,7 +1809,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e255bf3cf2e68744ba65da9e71e8fed2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2180,7 +2180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ca85a83d5015e4498f208f13e154b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1
 --- !u!4 &1482198917
 Transform:
   m_ObjectHideFlags: 0
