@@ -7,6 +7,7 @@ using UnityEngine;
 public class DigMeter : MonoBehaviour
 {
     [SerializeField] [Range(0.2f, 4f)] private float BarMoveSpeed = 3f;
+    //[SerializeField] private 
     public int Tries = 1;
 
     private Slider slider;

@@ -816,13 +816,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.03
-  m_Radius: 0.53
+  m_Height: 3.36
+  m_Radius: 0.61
   m_SlopeLimit: 30
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!136 &3573379210494602275
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -833,10 +833,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 3.2
+  m_Radius: 0.3897195
+  m_Height: 1.3577592
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0.8, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: -0.12112033, z: 0.05756998}
 --- !u!114 &3573379210494602287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +857,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+  cam: {fileID: 0}
 --- !u!54 &3573379210494602281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -962,7 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699964309a0159248bef6fc9397031b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BatteryLife: 5
+  BatteryLife: 3
   LoseUI: {fileID: 0}
 --- !u!1 &3573379212181289415
 GameObject:
@@ -1007,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a10f5f71e1de5a4486f95a597dac260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DepthDistance: 10
+  DepthDistance: 20
   BuriedLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -1018,7 +1019,6 @@ MonoBehaviour:
   OnTopOfTresure: 0
   CanPlayFoundAudio: 1
   DigScript: {fileID: 0}
-  BuriedObjectBeneath: {fileID: 0}
 --- !u!1 &3750560610832552067
 GameObject:
   m_ObjectHideFlags: 0

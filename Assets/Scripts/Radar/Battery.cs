@@ -18,8 +18,11 @@ public class Battery : MonoBehaviour
         if(BatteryLife <= 0)
         {
             ThirdPersonControllerScript.CanMove = false;
-            FindObjectOfType<ShowHideCursor>().Show();
-            LoseUI.SetActive(true);
+            if(LoseUI.activeSelf == false)
+            {
+                LoseUI.SetActive(true);
+                FindObjectOfType<ShowHideCursor>().Show();
+            }
         }
     }
 

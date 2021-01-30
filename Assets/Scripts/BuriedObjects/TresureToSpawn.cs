@@ -8,4 +8,7 @@ public class TresureToSpawn
     public string Name;
     public GameObject GameObjectToSpawn;
     public int Prabability;
+    [Space]
+    public int TriesToDig;
+    public int TimesToDig;
 }
