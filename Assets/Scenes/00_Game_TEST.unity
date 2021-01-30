@@ -2882,6 +2882,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1588703671}
   - component: {fileID: 1588703670}
+  - component: {fileID: 1588703672}
+  - component: {fileID: 1588703673}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2949,6 +2951,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1588703672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588703669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8485459fa27379e4a82841cb612558d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1588703673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588703669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b280a99cfefca1a4a9bf24c2fc30dfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1594716364
 GameObject:
   m_ObjectHideFlags: 3
@@ -3728,7 +3754,6 @@ MonoBehaviour:
   OnTopOfTresure: 0
   CanPlayFoundAudio: 1
   DigScript: {fileID: 1310542449}
-  BuriedObjectBeneath: {fileID: 0}
 --- !u!4 &49509933345456672
 Transform:
   m_ObjectHideFlags: 0

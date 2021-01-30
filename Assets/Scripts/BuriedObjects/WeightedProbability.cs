@@ -19,14 +19,14 @@ public class WeightedProbability : MonoBehaviour
         }
 
         RandomObjectToSpawn = Random.Range(0, TotalPrababilitySum);
-        Debug.Log("Caller: " + _caller + " number is: " + RandomObjectToSpawn);
+        //Debug.Log("Caller: " + _caller + " number is: " + RandomObjectToSpawn);
 
         for (int i=0; i< Tresures.Length; i++)
         {
             if (RandomObjectToSpawn <= Tresures[i].Prabability)
             {
                 //Debug.Log("The chosen is: " + Tresures[i].Name);
-                Debug.Log("It is: " + Tresures[i].Name);
+                //Debug.Log("It is: " + Tresures[i].Name);
                 return Tresures[i].Name;
             }
             else

@@ -19,7 +19,8 @@ public class MetalDetector : MonoBehaviour
 
     [SerializeField] private Dig DigScript;
     //private bool CanDig;
-    [SerializeField] private GameObject BuriedObjectBeneath;
+    
+    private GameObject BuriedObjectBeneath;
 
     private void Start()
     {
