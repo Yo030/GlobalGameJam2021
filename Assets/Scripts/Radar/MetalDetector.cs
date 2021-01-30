@@ -15,7 +15,7 @@ public class MetalDetector : MonoBehaviour
     private AudioManager AudioManager_Script;
 
     [SerializeField] private bool OnTopOfTresure;
-    private bool CanPlayFoundAudio = true;
+    public bool CanPlayFoundAudio = true;
 
     [SerializeField] private Dig DigScript;
     //private bool CanDig;
@@ -68,7 +68,6 @@ public class MetalDetector : MonoBehaviour
             }
         }
 
-
         FindNearestBuriedObject();
     }
 
@@ -100,14 +99,14 @@ public class MetalDetector : MonoBehaviour
     {
         float _devidedradius = MetalDetectorRadius / DivideCircleIn;
         
-        if(OnTopOfTresure)
+        if(OnTopOfTresure)                                          //CHANGES SOUND SPEED DEPENDING ON DISTANCE TO OBJECT
         {
             PlayAudio("Beet", 4.5f);
-            if (CanPlayFoundAudio)
+            /*if (CanPlayFoundAudio)                                //PLAYS CONFIRMATION SOUND
             {
                 AudioManager_Script.play("Correct_Beep", 1f);
                 CanPlayFoundAudio = false;
-            }
+            }*/
         }
         else if (_distncetoobject <= _devidedradius)
         {
@@ -136,7 +135,7 @@ public class MetalDetector : MonoBehaviour
         }
     }
 
-    private void PlayAudio(string _soundname, float _pitch)
+    private void PlayAudio(string _soundname, float _pitch)                     //PLAYS THE AUDIO BY NAME AND PITCH
     {
         if(!AudioSource_Component.isPlaying)
         {
