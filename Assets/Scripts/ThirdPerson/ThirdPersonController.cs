@@ -20,10 +20,14 @@ public class ThirdPersonController : MonoBehaviour
 
     bool isGrounded;
 
+    private Rigidbody rb;
+
+    public Transform cam;
 
     private void Start()
     {
         CanMove = true;
+        rb = gameObject.GetComponent<Rigidbody>();
         PlayerController = GetComponent<CharacterController>();
     }
 
@@ -45,13 +49,17 @@ public class ThirdPersonController : MonoBehaviour
 
             if (_direction.magnitude >= 0.1f)
             {
-                float _targetangle = Mathf.Atan2(_direction.x, _direction.z) * Mathf.Rad2Deg;//ROTATE TO THE ANGLE YOU WANT TO LOOK AT
+                float _targetangle = Mathf.Atan2(_direction.x, _direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;//ROTATE TO THE ANGLE YOU WANT TO LOOK AT
                 float _angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetangle, ref TurnVelocity, TurnTime);
                 transform.rotation = Quaternion.Euler(0, _angle, 0);
-                PlayerController.Move(_direction * PlayerSpeed * Time.deltaTime);
+
+                Vector3 moveDir = Quaternion.Euler(0f, _targetangle, 0f) * Vector3.forward;
+
+                PlayerController.Move(moveDir.normalized * PlayerSpeed * Time.deltaTime);
             }
 
             gravityVelocity.y += gravity * Time.deltaTime;
+            
             PlayerController.Move(gravityVelocity * Time.deltaTime);
         }
     }
