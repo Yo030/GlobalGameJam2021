@@ -7,7 +7,16 @@ using UnityEngine;
 public class DigMeter : MonoBehaviour
 {
     [SerializeField] [Range(0.2f, 4f)] private float BarMoveSpeed = 3f;
-    //[SerializeField] private 
+    [SerializeField] private HorizontalLayoutGroup Tries_Left_UI;
+    [SerializeField] private WeightedProbability WeightedProbability_Script;
+    [SerializeField] private ShowHideCursor ShowHideCursor_Script;
+    [SerializeField] private GameObject UI_ToDeactivate;
+    [SerializeField] private TryController TryController_Script;
+    [SerializeField] private Inventory Inventory_Script;
+
+    public GameObject CurrentTresureDiggnig;
+    public string CurrentTresureDiggnigName;
+
     public int Tries = 1;
 
     private Slider slider;
@@ -19,13 +28,39 @@ public class DigMeter : MonoBehaviour
     private float FillAmountPerSec;
     public float DecreeseSpeedBy;
 
-
     [Range(0, 1)] public float[] valor_bueno;
+
+    public float OriginalBarMoveSpeed;
+
+    private void Awake()
+    {
+        WeightedProbability_Script = FindObjectOfType<WeightedProbability>();
+    }
 
     private void Start()
     {
+        Inventory_Script = FindObjectOfType<Inventory>();
         slider = GetComponent<Slider>();
         DecreeseSpeedBy = (BarMoveSpeed - 0.1f) / 5;
+    }
+
+    public void SetDigParameters(GameObject _buriedobject)
+    {
+        if(OriginalBarMoveSpeed == 0)OriginalBarMoveSpeed = BarMoveSpeed;
+        else  BarMoveSpeed = OriginalBarMoveSpeed;
+
+        slider = GetComponent<Slider>();
+        slider.value = slider.maxValue / 2;
+        CanMove = true;
+
+        CurrentTresureDiggnig = _buriedobject;
+        int _id = _buriedobject.GetComponent<SpawnObject>().ObjectID;
+
+        CurrentTresureDiggnigName = VariableManager.instance.Tresures[_id].Name;
+        TimesToDig = VariableManager.instance.Tresures[_id].TimesToDig;
+        Tries = VariableManager.instance.Tresures[_id].TriesToDig;
+
+        //TryController_Script.CheckForLives(Tries);
     }
 
     void Update()
@@ -60,14 +95,15 @@ public class DigMeter : MonoBehaviour
         }
         if(SuccessfulDig)
         {
-            Debug.Log("Good " + slider.value);
+            //Debug.Log("Good " + slider.value);
             BarMoveSpeed -= DecreeseSpeedBy;
             TimesToDig--;
         }
         else
         {
-            Debug.Log("Bad" + slider.value);
+            //Debug.Log("Bad" + slider.value);
             Tries--;
+            //TryController_Script.CheckForLives(Tries);
         }
         Invoke("TryAgain", 2f);
     }
@@ -75,15 +111,25 @@ public class DigMeter : MonoBehaviour
     {
         if(TimesToDig == 0)
         {
-            Debug.Log("Tresure dug!!!");
+            //Debug.Log("Tresure dug!!!");
+            Debug.Log("YOU JUST FOUND A: " + CurrentTresureDiggnigName + "!!!");
+            Inventory_Script.CheckForSpaces(CurrentTresureDiggnig);
+            CurrentTresureDiggnigName = null;
+            Invoke("CanWalkAgain", 1f);
+            Destroy(CurrentTresureDiggnig);
             return;
         }
 
         if(Tries == 0)
         {
-            Debug.Log("Loser");
+            Invoke("CanWalkAgain", 1f);
+            Debug.Log("You lost the tresure");
             return;
         }
         CanMove = true;
+    }
+    private void CanWalkAgain()
+    {
+        UI_ToDeactivate.SetActive(false);              //DEACTIVATES DIG UI
     }
 }

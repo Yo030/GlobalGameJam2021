@@ -1,19 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WeightedProbability : MonoBehaviour
 {
-    [SerializeField] private TresureToSpawn[] Tresures;
+    //public TresureToSpawn[] VariableManager.instance.Tresures;
 
     private int TotalPrababilitySum;
     private int RandomObjectToSpawn;
-    
-    public string ChooseObjectInTable(string _caller)
+
+
+    public int ChooseObjectInTable()
     {
         TotalPrababilitySum = 0;
 
-        foreach (var item in Tresures)
+        foreach (var item in VariableManager.instance.Tresures)
         {
             TotalPrababilitySum += item.Prabability;
         }
@@ -21,19 +20,19 @@ public class WeightedProbability : MonoBehaviour
         RandomObjectToSpawn = Random.Range(0, TotalPrababilitySum);
         //Debug.Log("Caller: " + _caller + " number is: " + RandomObjectToSpawn);
 
-        for (int i=0; i< Tresures.Length; i++)
+        for (int i=0; i< VariableManager.instance.Tresures.Length; i++)
         {
-            if (RandomObjectToSpawn <= Tresures[i].Prabability)
+            if (RandomObjectToSpawn <= VariableManager.instance.Tresures[i].Prabability)
             {
-                //Debug.Log("The chosen is: " + Tresures[i].Name);
-                //Debug.Log("It is: " + Tresures[i].Name);
-                return Tresures[i].Name;
+                //Debug.Log("The chosen is: " + VariableManager.instance.Tresures[i].Name);
+                //Debug.Log("It is: " + VariableManager.instance.Tresures[i].Name);
+                return VariableManager.instance.Tresures[i].id;
             }
             else
             {
-                RandomObjectToSpawn -= Tresures[i].Prabability;
+                RandomObjectToSpawn -= VariableManager.instance.Tresures[i].Prabability;
             }
         }
-        return Tresures[0].Name;
+        return VariableManager.instance.Tresures[0].id;
     }
 }

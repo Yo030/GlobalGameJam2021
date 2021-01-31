@@ -6,9 +6,12 @@ using UnityEngine;
 public class TresureToSpawn
 {
     public string Name;
-    public GameObject GameObjectToSpawn;
-    public int Prabability;
+    public int id;
     [Space]
+    public int Prabability;
     public int TriesToDig;
     public int TimesToDig;
+    [Space]
+    public GameObject GameObjectToSpawn;
+    public Sprite UISprite;
 }
