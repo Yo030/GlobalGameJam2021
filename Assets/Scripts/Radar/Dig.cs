@@ -23,6 +23,7 @@ public class Dig : MonoBehaviour
         //Debug.Log("YOU JUST FOUND A: "+ VariableManager.instance.Tresures[_id].Name  + "!!!");            //MESSAGE
         
         DigMeter_Script.SetDigParameters(_buriedobject);
+        ShowHideCursor_Script.EnableDisable(false);
         //ShowHideCursor_Script.Show();               //SHOWS CURSOR
         UI_ToActivate.SetActive(true);              //ACTIVATES DIG UI
         //DigUI.SetActive(false);//Show UI

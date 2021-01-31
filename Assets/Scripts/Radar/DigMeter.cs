@@ -116,7 +116,6 @@ public class DigMeter : MonoBehaviour
             Inventory_Script.CheckForSpaces(CurrentTresureDiggnig);
             CurrentTresureDiggnigName = null;
             Invoke("CanWalkAgain", 1f);
-            Destroy(CurrentTresureDiggnig);
             return;
         }
 
@@ -130,6 +129,8 @@ public class DigMeter : MonoBehaviour
     }
     private void CanWalkAgain()
     {
+        Destroy(CurrentTresureDiggnig);
+        ShowHideCursor_Script.EnableDisable(true);
         UI_ToDeactivate.SetActive(false);              //DEACTIVATES DIG UI
     }
 }

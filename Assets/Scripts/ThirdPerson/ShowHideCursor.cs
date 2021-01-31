@@ -33,7 +33,7 @@ public class ShowHideCursor : MonoBehaviour
         Debug.Log("Cursor is locked: " + Cursor.visible);
         Cursor.lockState = CursorLockMode.None;
     }
-    private void EnableDisable(bool _act_deact)
+    public void EnableDisable(bool _act_deact)
     {
         MetalDetector_Script.enabled = _act_deact;
         ThirdPersonController_Script.CanMove = _act_deact;                                //ACTIVATES PLAYER MOVEMNT
