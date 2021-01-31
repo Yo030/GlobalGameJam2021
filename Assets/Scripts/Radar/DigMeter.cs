@@ -30,6 +30,8 @@ public class DigMeter : MonoBehaviour
 
     [Range(0, 1)] public float[] valor_bueno;
 
+    public float OriginalBarMoveSpeed;
+
     private void Awake()
     {
         WeightedProbability_Script = FindObjectOfType<WeightedProbability>();
@@ -44,6 +46,9 @@ public class DigMeter : MonoBehaviour
 
     public void SetDigParameters(GameObject _buriedobject)
     {
+        if(OriginalBarMoveSpeed == 0)OriginalBarMoveSpeed = BarMoveSpeed;
+        else  BarMoveSpeed = OriginalBarMoveSpeed;
+
         slider = GetComponent<Slider>();
         slider.value = slider.maxValue / 2;
         CanMove = true;
@@ -51,9 +56,9 @@ public class DigMeter : MonoBehaviour
         CurrentTresureDiggnig = _buriedobject;
         int _id = _buriedobject.GetComponent<SpawnObject>().ObjectID;
 
-        CurrentTresureDiggnigName = WeightedProbability_Script.Tresures[_id].Name;
-        TimesToDig = WeightedProbability_Script.Tresures[_id].TimesToDig;
-        Tries = WeightedProbability_Script.Tresures[_id].TriesToDig;
+        CurrentTresureDiggnigName = VariableManager.instance.Tresures[_id].Name;
+        TimesToDig = VariableManager.instance.Tresures[_id].TimesToDig;
+        Tries = VariableManager.instance.Tresures[_id].TriesToDig;
 
         //TryController_Script.CheckForLives(Tries);
     }
@@ -117,7 +122,8 @@ public class DigMeter : MonoBehaviour
 
         if(Tries == 0)
         {
-            Debug.Log("Loser");
+            Invoke("CanWalkAgain", 1f);
+            Debug.Log("You lost the tresure");
             return;
         }
         CanMove = true;

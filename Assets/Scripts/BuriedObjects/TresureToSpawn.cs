@@ -7,9 +7,11 @@ public class TresureToSpawn
 {
     public string Name;
     public int id;
-    public GameObject GameObjectToSpawn;
-    public int Prabability;
     [Space]
+    public int Prabability;
     public int TriesToDig;
     public int TimesToDig;
+    [Space]
+    public GameObject GameObjectToSpawn;
+    public Sprite UISprite;
 }

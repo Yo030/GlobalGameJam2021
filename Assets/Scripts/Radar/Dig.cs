@@ -20,7 +20,7 @@ public class Dig : MonoBehaviour
     {
         int _id = _buriedobject.GetComponent<SpawnObject>().ObjectID;
 
-        Debug.Log("YOU JUST FOUND A: "+ WeightedProbability_Script.Tresures[_id].Name  + "!!!");            //MESSAGE
+        Debug.Log("YOU JUST FOUND A: "+ VariableManager.instance.Tresures[_id].Name  + "!!!");            //MESSAGE
         
         DigMeter_Script.SetDigParameters(_buriedobject);
         ShowHideCursor_Script.Show();               //SHOWS CURSOR

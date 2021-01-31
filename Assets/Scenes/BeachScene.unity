@@ -282,7 +282,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -38.599976, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2519,34 +2519,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tries_Sprite (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219586, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
 --- !u!224 &899286529 stripped
@@ -2718,7 +2690,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2871543, y: -0.0013763364, z: 0.00041259828, w: 0.9578833}
+  m_LocalRotation: {x: 0.28715426, y: -0.0013762534, z: 0.0004125733, w: 0.9578833}
   m_LocalPosition: {x: 60, y: 10.392, z: -53.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3420,34 +3392,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tries_Sprite (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219586, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
 --- !u!224 &1023499937 stripped
@@ -3648,13 +3592,14 @@ GameObject:
   - component: {fileID: 1164934399}
   - component: {fileID: 1164934401}
   - component: {fileID: 1164934400}
+  - component: {fileID: 1164934402}
   m_Layer: 5
   m_Name: Dig_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1164934399
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3716,6 +3661,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164934398}
   m_CullTransparentMesh: 0
+--- !u!114 &1164934402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164934398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e151c4a173f5545b3d9506683728dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartDisable: 1
 --- !u!1 &1175428103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,7 +3809,10 @@ MonoBehaviour:
   - 
   - 
   - 
-  Tresures: []
+  BackgroundImageComponent: {fileID: 0}
+  ParentImageComponent: {fileID: 0}
+  ChildImages: []
+  SetImageInSlot_Script: {fileID: 0}
 --- !u!1001 &1220469009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4708,73 +4669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4beed6421a47064babb1b8a7b9e63e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tresures:
-  - Name: Lata
-    id: 0
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 20
-    TriesToDig: 3
-    TimesToDig: 1
-  - Name: Corcholata
-    id: 1
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 15
-    TriesToDig: 3
-    TimesToDig: 1
-  - Name: Moneda
-    id: 2
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 10
-    TriesToDig: 3
-    TimesToDig: 3
-  - Name: Ansuelo
-    id: 3
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 10
-    TriesToDig: 3
-    TimesToDig: 2
-  - Name: Pila
-    id: 4
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 10
-    TriesToDig: 2
-    TimesToDig: 3
-  - Name: Llave
-    id: 5
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 10
-    TriesToDig: 3
-    TimesToDig: 3
-  - Name: Anillo
-    id: 6
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 7
-    TriesToDig: 2
-    TimesToDig: 3
-  - Name: Reloj
-    id: 7
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 6
-    TriesToDig: 2
-    TimesToDig: 4
-  - Name: Bala
-    id: 8
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 5
-    TriesToDig: 2
-    TimesToDig: 4
-  - Name: Mina
-    id: 9
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 4
-    TriesToDig: 2
-    TimesToDig: 4
-  - Name: Cofre
-    id: 10
-    GameObjectToSpawn: {fileID: 0}
-    Prabability: 3
-    TriesToDig: 1
-    TimesToDig: 5
 --- !u!4 &1588703671
 Transform:
   m_ObjectHideFlags: 0
@@ -4830,76 +4724,88 @@ MonoBehaviour:
   Tresures:
   - Name: Lata
     id: 0
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 20
     TriesToDig: 3
     TimesToDig: 1
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: 7817583837157906935, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Corcholata
     id: 1
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 15
     TriesToDig: 3
     TimesToDig: 1
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: -8019522018282520579, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Moneda
     id: 2
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 10
     TriesToDig: 3
     TimesToDig: 3
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: 1565126442518465816, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Ansuelo
     id: 3
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 10
     TriesToDig: 3
     TimesToDig: 2
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: -8212877408813700127, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Pila
     id: 4
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 10
     TriesToDig: 2
     TimesToDig: 3
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: -1359617896429725707, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: LLave
     id: 5
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 10
     TriesToDig: 3
     TimesToDig: 3
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: -8340326077076497351, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Anillo
     id: 6
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 7
     TriesToDig: 2
     TimesToDig: 3
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: -6997249216315989621, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Reloj
     id: 7
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 6
     TriesToDig: 2
     TimesToDig: 4
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: 5370857239458118145, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Bala
     id: 8
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 5
     TriesToDig: 2
     TimesToDig: 4
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: 3907434544379949073, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Mina
     id: 9
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 4
     TriesToDig: 2
     TimesToDig: 4
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: 4578915318732695066, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Cofre
     id: 10
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 3
     TriesToDig: 1
     TimesToDig: 5
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: 7059774574737931453, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   - Name: Cofre
     id: 0
-    GameObjectToSpawn: {fileID: 0}
     Prabability: 0
     TriesToDig: 0
     TimesToDig: 0
+    GameObjectToSpawn: {fileID: 0}
+    UISprite: {fileID: -7468967293253748679, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
   InventorySlots: 3
   Money: 0
 --- !u!1 &1607829649 stripped
@@ -5238,7 +5144,7 @@ MonoBehaviour:
   ShowHideCursor_Script: {fileID: 1588703673}
   UI_ToDeactivate: {fileID: 1164934398}
   TryController_Script: {fileID: 1769898373}
-  Inventory_Script: {fileID: 0}
+  Inventory_Script: {fileID: 1175428108}
   CurrentTresureDiggnig: {fileID: 0}
   CurrentTresureDiggnigName: 
   Tries: 0
@@ -5249,6 +5155,7 @@ MonoBehaviour:
   - 0.75
   - 0.25
   - 0
+  OriginalBarMoveSpeed: 0.54
 --- !u!114 &1769898373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5394,7 +5301,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877126559}
-  m_LocalRotation: {x: 0.2871543, y: -0.0013763238, z: 0.0004125944, w: 0.9578833}
+  m_LocalRotation: {x: 0.28715426, y: -0.0013762793, z: 0.00041258105, w: 0.9578833}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5659,7 +5566,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
