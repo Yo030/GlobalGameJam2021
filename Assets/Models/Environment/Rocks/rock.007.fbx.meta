@@ -3,12 +3,7 @@ guid: b8fcea2ec6315bd49b7bfbab7545a846
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Roca
-    second: {fileID: 2100000, guid: af418eaf219187d44b4d87621f6fb719, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
