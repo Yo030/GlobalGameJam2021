@@ -7,7 +7,9 @@ public class Dig : MonoBehaviour
 {
     [SerializeField] private GameObject UI_ToActivate;
     [SerializeField] private ShowHideCursor ShowHideCursor_Script;
-        
+
+    public Rigidbody rb;
+
     private GameObject DigUI_Text;
 
     /*
@@ -17,7 +19,9 @@ public class Dig : MonoBehaviour
     }*/
 
     public void DiscoverTresure(GameObject _buriedobject)
-    {        
+    {
+        rb.isKinematic = true;
+
         Debug.Log("YOU JUST DIGGED!!!");            //MESSAGE
         ShowHideCursor_Script.Show();               //SHOWS CURSOR
         UI_ToActivate.SetActive(true);              //ACTIVATES DIG UI
@@ -25,4 +29,5 @@ public class Dig : MonoBehaviour
         //Destroy(_buriedobject);        
     }
 }
+
 
