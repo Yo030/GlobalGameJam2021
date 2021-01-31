@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    public float BatteryLife = 120f;
+    public float BatteryLife = 360f;
     [SerializeField] private GameObject LoseUI;
     private ThirdPersonController ThirdPersonControllerScript;
     [SerializeField] private int BatteryRechargeAmmount = 1;
+    [Space]
+    [SerializeField] private AudioManager AudioManager_Script;
+    public string SoundName;
 
     private void Start()
     {
@@ -18,12 +21,18 @@ public class Battery : MonoBehaviour
     {
         if(BatteryLife <= 0)
         {
-            ThirdPersonControllerScript.CanMove = false;
-            if(LoseUI.activeSelf == false)
-            {
-                LoseUI.SetActive(true);
-                FindObjectOfType<ShowHideCursor>().Show();
-            }
+            AudioManager_Script.play("Piedra", 1);
+            Invoke("LoseGame", 2);
+        }
+    }
+
+    public void LoseGame()
+    {
+        ThirdPersonControllerScript.CanMove = false;
+        if (LoseUI.activeSelf == false)
+        {
+            LoseUI.SetActive(true);
+            FindObjectOfType<ShowHideCursor>().Show();
         }
     }
 

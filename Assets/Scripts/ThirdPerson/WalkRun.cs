@@ -46,6 +46,7 @@ public class WalkRun : MonoBehaviour
 
     private void Walk()
     {
+        Walking = true;
         ThirdPersonController_Script.PlayerSpeed = WalkSpeed;
         ThirdPersonController_Script.TurnTime = WalkTurnSpeed;
         MetalDetector_Script.enabled = true;
@@ -53,6 +54,7 @@ public class WalkRun : MonoBehaviour
     }
     private void Run()
     {
+        Walking = false;
         ThirdPersonController_Script.PlayerSpeed = RunSpeed;
         ThirdPersonController_Script.TurnTime = RunTurnSpeed;
         MetalDetector_Script.CanPlayFoundAudio = true;

@@ -6,7 +6,32 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: calzon
+    second: {fileID: 2100000, guid: ee34258eca3e1424883f8c23a5e6274f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: calzon.001
+    second: {fileID: 2100000, guid: b2cdc176b1c24b94bb071219e5df1dc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cornea
+    second: {fileID: 2100000, guid: eec89f2e09aef7541ba147454da48116, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rana
+    second: {fileID: 2100000, guid: e2125b740bd97d646a8873d7b7202739, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rana_labios
+    second: {fileID: 2100000, guid: eec89f2e09aef7541ba147454da48116, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
