@@ -447,8 +447,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67724417}
-  m_LocalRotation: {x: 0.25216976, y: -0.0013903601, z: 0.00036231606, w: 0.96768194}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.25216976, y: -0.0013903934, z: 0.00036232476, w: 0.96768194}
+  m_LocalPosition: {x: 0, y: 0.0000009536743, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 987186876}
@@ -1605,8 +1605,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564958737}
-  m_LocalRotation: {x: 0.2696834, y: -0.0013835583, z: 0.00038747964, w: 0.96294796}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.26968336, y: -0.0013835751, z: 0.00038748415, w: 0.962948}
+  m_LocalPosition: {x: 0, y: 0.0000009536743, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6970233}
@@ -1969,10 +1969,10 @@ PrefabInstance:
     - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8413304977814219599, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
       propertyPath: m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32efe699159410d4a88d05fb88a9ffd1, type: 3}
@@ -2690,7 +2690,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.28715426, y: -0.0013762534, z: 0.0004125733, w: 0.9578833}
+  m_LocalRotation: {x: 0.2871543, y: -0.0013762977, z: 0.00041258664, w: 0.9578833}
   m_LocalPosition: {x: 60, y: 10.392, z: -53.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3803,12 +3803,6 @@ MonoBehaviour:
   - {fileID: 1225430384}
   - {fileID: 1694556563}
   - {fileID: 652870470}
-  InventoryList:
-  - 
-  - 
-  - 
-  - 
-  - 
   BackgroundImageComponent: {fileID: 0}
   ParentImageComponent: {fileID: 0}
   ChildImages: []
@@ -4806,7 +4800,16 @@ MonoBehaviour:
     TimesToDig: 0
     GameObjectToSpawn: {fileID: 0}
     UISprite: {fileID: -7468967293253748679, guid: 5263b6d346a848e48ba837ae6fb71aeb, type: 3}
-  InventorySlots: 3
+  InventoryList:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  MaxInventorySlots: 3
   Money: 0
 --- !u!1 &1607829649 stripped
 GameObject:
@@ -5301,8 +5304,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877126559}
-  m_LocalRotation: {x: 0.28715426, y: -0.0013762793, z: 0.00041258105, w: 0.9578833}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.28715423, y: -0.0013762977, z: 0.00041258652, w: 0.95788336}
+  m_LocalPosition: {x: 0, y: 0.0000009536743, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 851198280}

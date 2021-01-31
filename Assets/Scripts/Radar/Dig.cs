@@ -20,10 +20,10 @@ public class Dig : MonoBehaviour
     {
         int _id = _buriedobject.GetComponent<SpawnObject>().ObjectID;
 
-        Debug.Log("YOU JUST FOUND A: "+ VariableManager.instance.Tresures[_id].Name  + "!!!");            //MESSAGE
+        //Debug.Log("YOU JUST FOUND A: "+ VariableManager.instance.Tresures[_id].Name  + "!!!");            //MESSAGE
         
         DigMeter_Script.SetDigParameters(_buriedobject);
-        ShowHideCursor_Script.Show();               //SHOWS CURSOR
+        //ShowHideCursor_Script.Show();               //SHOWS CURSOR
         UI_ToActivate.SetActive(true);              //ACTIVATES DIG UI
         //DigUI.SetActive(false);//Show UI
         //Destroy(_buriedobject);        

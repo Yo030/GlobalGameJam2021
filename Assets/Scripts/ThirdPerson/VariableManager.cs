@@ -6,12 +6,17 @@ public class VariableManager : MonoBehaviour
 {
     public static VariableManager instance = null;
     public TresureToSpawn[] Tresures;
-    [Range(1,6)] public int InventorySlots = 3;
+
+    [Space]
+    public string[] InventoryList;
+    [Range(1,6)] public int MaxInventorySlots = 3;
+
+    [Space]
     public int Money = 0;
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -20,5 +25,4 @@ public class VariableManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }
