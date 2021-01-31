@@ -13,6 +13,9 @@ public class DigMeter : MonoBehaviour
     [SerializeField] private GameObject UI_ToDeactivate;
     [SerializeField] private TryController TryController_Script;
     [SerializeField] private Inventory Inventory_Script;
+    [Space]
+    [SerializeField] private AudioManager AudioManager_Script;
+    public string SoundName;
 
     public GameObject CurrentTresureDiggnig;
     public string CurrentTresureDiggnigName;
@@ -96,21 +99,24 @@ public class DigMeter : MonoBehaviour
         if(SuccessfulDig)
         {
             //Debug.Log("Good " + slider.value);
+            AudioManager_Script.play(SoundName, 1);
             BarMoveSpeed -= DecreeseSpeedBy;
             TimesToDig--;
         }
         else
         {
+            AudioManager_Script.play("Piedra", 1);
             //Debug.Log("Bad" + slider.value);
             Tries--;
             //TryController_Script.CheckForLives(Tries);
         }
-        Invoke("TryAgain", 2f);
+        Invoke("TryAgain", 0.7f);
     }
     private void TryAgain()
     {
         if(TimesToDig == 0)
         {
+            AudioManager_Script.play("Found", 1);
             //Debug.Log("Tresure dug!!!");
             Debug.Log("YOU JUST FOUND A: " + CurrentTresureDiggnigName + "!!!");
             Inventory_Script.CheckForSpaces(CurrentTresureDiggnig);
@@ -121,6 +127,7 @@ public class DigMeter : MonoBehaviour
 
         if(Tries == 0)
         {
+            AudioManager_Script.play("Snap", 1);
             Invoke("CanWalkAgain", 1f);
             Debug.Log("You lost the tresure");
             return;

@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private SetImageInSlot[] ChildImages;
 
     public SetImageInSlot SetImageInSlot_Script;
-    private Color CompleteTranspaernt = new Color(0,0,0,0);
+    private Color Transpaernt = new Color(0,0,0,0);
     private Color NormalSlotColor = new Color(0, 0, 0, .3139f);
 
     private void Start()
@@ -57,7 +57,9 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i < VariableManager.instance.MaxInventorySlots; i++)
         {
+            Sprite _childimage = InventorySlots[i].transform.gameObject.GetComponentInChildren<Image>().sprite;
             ChildImages[i] = InventorySlots[i].transform.gameObject.GetComponentInChildren<SetImageInSlot>();
+            ChildImages[i].SetColor(_childimage);
         }
 
         for (int i = 0; i < VariableManager.instance.MaxInventorySlots; i++)

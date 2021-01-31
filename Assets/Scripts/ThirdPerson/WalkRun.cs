@@ -5,12 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(ThirdPersonController))]
 public class WalkRun : MonoBehaviour
 {
+    [SerializeField] private ShowHideCursor ShowHideCursor_Script;
     public bool Walking;
     [SerializeField] private float WalkSpeed = 2.5f;
     private float WalkTurnSpeed = 0.3f;
     [SerializeField] private float RunSpeed = 5.0f;
     private float RunTurnSpeed = 0.05f;
 
+    [SerializeField] private GameObject Shop_UI;
     private Battery Batter_Script;
     private MetalDetector MetalDetector_Script;    
     private ThirdPersonController ThirdPersonController_Script;
@@ -23,7 +25,7 @@ public class WalkRun : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Q) && Batter_Script.BatteryLife > 0)
+        if(Input.GetMouseButton(1) && Batter_Script.BatteryLife > 0)
         {
             Walk();
         }
@@ -32,6 +34,16 @@ public class WalkRun : MonoBehaviour
             Run();
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Store" && Input.GetKey(KeyCode.E))
+        {
+            Shop_UI.SetActive(true);
+            ShowHideCursor_Script.Show();
+        }
+    }
+
     private void Walk()
     {
         Walking = true;

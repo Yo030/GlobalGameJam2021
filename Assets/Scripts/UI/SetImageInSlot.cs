@@ -22,4 +22,9 @@ public class SetImageInSlot : MonoBehaviour
             _thisimage.color = White;
         }
     }
+    public void SetColor(Sprite _imagetoplace)
+    {
+        Image _thisimage = this.GetComponent<Image>();
+        _thisimage.color = Transparent;
+    }
 }
