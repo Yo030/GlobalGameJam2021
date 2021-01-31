@@ -6,6 +6,7 @@ using UnityEngine;
 public class TresureToSpawn
 {
     public string Name;
+    public int id;
     public GameObject GameObjectToSpawn;
     public int Prabability;
     [Space]

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class WeightedProbability : MonoBehaviour
 {
-    [SerializeField] private TresureToSpawn[] Tresures;
+    public TresureToSpawn[] Tresures;
 
     private int TotalPrababilitySum;
     private int RandomObjectToSpawn;
-    
-    public string ChooseObjectInTable(string _caller)
+
+
+    public int ChooseObjectInTable()
     {
         TotalPrababilitySum = 0;
 
@@ -27,13 +28,13 @@ public class WeightedProbability : MonoBehaviour
             {
                 //Debug.Log("The chosen is: " + Tresures[i].Name);
                 //Debug.Log("It is: " + Tresures[i].Name);
-                return Tresures[i].Name;
+                return Tresures[i].id;
             }
             else
             {
                 RandomObjectToSpawn -= Tresures[i].Prabability;
             }
         }
-        return Tresures[0].Name;
+        return Tresures[0].id;
     }
 }

@@ -23,7 +23,7 @@ public class WalkRun : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKey(KeyCode.LeftShift) && Batter_Script.BatteryLife > 0)
+        if(Input.GetKey(KeyCode.Q) && Batter_Script.BatteryLife > 0)
         {
             Walk();
         }

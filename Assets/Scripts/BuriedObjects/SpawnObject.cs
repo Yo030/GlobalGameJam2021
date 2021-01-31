@@ -5,12 +5,15 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     public string ObjectToSpawn;
+    public int ObjectID;
     
-    private WeightedProbability WeightedProbability_Script;
+    [SerializeField] private WeightedProbability WeightedProbability_Script;
 
     private void Start()
     {
-        WeightedProbability_Script = FindObjectOfType<WeightedProbability>();
-        ObjectToSpawn = WeightedProbability_Script.ChooseObjectInTable(this.name);
+        int _objecttospawn = WeightedProbability_Script.ChooseObjectInTable();
+
+        ObjectToSpawn = WeightedProbability_Script.Tresures[_objecttospawn].Name;
+        ObjectID = WeightedProbability_Script.Tresures[_objecttospawn].id;
     }
 }
