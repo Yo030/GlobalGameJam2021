@@ -23,14 +23,6 @@ public class Inventory : MonoBehaviour
         ReloadSlots(0);
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            ReloadSlots(1);
-        }
-    }
-
     public void CheckForSpaces(GameObject _newitem)
     {
         //Debug.Log("Mi lista: " + this.InventoryList.Length);
