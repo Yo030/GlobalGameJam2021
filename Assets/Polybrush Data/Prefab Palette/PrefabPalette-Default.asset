@@ -15,7 +15,7 @@ MonoBehaviour:
   prefabs:
   - gameObject: {fileID: 229132824053975788, guid: c0d41f5dfd8cb26418bc80c03a864001, type: 3}
     settings:
-      m_Strength: 47.92017
+      m_Strength: 69.21849
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 20, y: 180, z: 20}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -51,8 +51,8 @@ MonoBehaviour:
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 5, y: 360, z: 5}
       m_ScaleRangeMin: {x: 0.8, y: 0.8, z: 0.8}
-      m_ScaleRangeMax: {x: 1.2, y: 1.2, z: 1.2}
-      m_UniformScale: {x: 0.8, y: 1.2}
+      m_ScaleRangeMax: {x: 1.2, y: 1.4, z: 1.2}
+      m_UniformScale: {x: 0.8, y: 1.5}
       m_UniformBool: 1
       m_XRotationBool: 1
       m_YRotationBool: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 5, y: 360, z: 5}
       m_ScaleRangeMin: {x: 0.8, y: 0.8, z: 0.8}
       m_ScaleRangeMax: {x: 1.2, y: 1.2, z: 1.2}
-      m_UniformScale: {x: 0.8, y: 1.2}
+      m_UniformScale: {x: 0.8, y: 1.5}
       m_UniformBool: 1
       m_XRotationBool: 1
       m_YRotationBool: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 5, y: 360, z: 5}
       m_ScaleRangeMin: {x: 0.8, y: 0.8, z: 0.8}
       m_ScaleRangeMax: {x: 1.2, y: 1.2, z: 1.2}
-      m_UniformScale: {x: 0.8, y: 1.2}
+      m_UniformScale: {x: 0.8, y: 1.5}
       m_UniformBool: 1
       m_XRotationBool: 1
       m_YRotationBool: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
     name: planta_B
   - gameObject: {fileID: 1522776028681367816, guid: 2b06bf06ec58b5842a3e3ae7e9feb5c8, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 87.43697
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 20, y: 360, z: 20}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -111,7 +111,7 @@ MonoBehaviour:
     name: umbrella_B_Prefab
   - gameObject: {fileID: 1388308040492960441, guid: 9380e8c0f5d2d7b49abd462103be3f7b, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 67.138664
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 20, y: 360, z: 20}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -164,7 +164,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 0.8, y: 1.5}
+      m_UniformScale: {x: 0.8, y: 1.4}
       m_UniformBool: 1
       m_XRotationBool: 1
       m_YRotationBool: 1
@@ -173,3 +173,131 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: palmera_B
+  - gameObject: {fileID: 5351948218886879539, guid: e342f3c77d3e7c34193de67c9b15c740, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: toalla
+  - gameObject: {fileID: 8818139816108873371, guid: f9b664e1f1024bf48976b15723428c41, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: toalla_B
+  - gameObject: {fileID: 6436281606763328104, guid: 48e01707e3ed505458037084f3472ab4, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: toalla_C
+  - gameObject: {fileID: 3448408273579709075, guid: 0cce1edb14ab81e4a8b64e09cc2d7f8e, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Surfboard_1
+  - gameObject: {fileID: 3455054666541381479, guid: 00298713cbc9b0c449f698e7587e32bb, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Surfboard_2
+  - gameObject: {fileID: 9000308950961636261, guid: 66afc1e941fa06e499e658f3bd029d89, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Surfboard_3
+  - gameObject: {fileID: 8543390795525105267, guid: adee56b78c705ca48abe6cd13db9e31e, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Inflable_Pato
+  - gameObject: {fileID: 3755167237798670279, guid: 4e86fa419322c8e478d2f3a2115cf445, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 1
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Inflable_1
