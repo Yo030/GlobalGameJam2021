@@ -13,7 +13,6 @@ public class MetalDetector : MonoBehaviour
     [SerializeField] private GameObject AudioManager_GameObject;
     private AudioSource AudioSource_Component;
     private AudioManager AudioManager_Script;
-    private SpawnObject SpawnObject_Script;
 
     [SerializeField] private bool OnTopOfTresure;
     public bool CanPlayFoundAudio = true;
@@ -21,7 +20,14 @@ public class MetalDetector : MonoBehaviour
     [SerializeField] private Dig DigScript;
     //private bool CanDig;
     
-    [SerializeField] private GameObject BuriedObjectBeneath;
+    private GameObject BuriedObjectBeneath;
+
+    public PlayerAnimationController PAC;
+
+    private void OnEnable()
+    {
+        PAC.OnWithdrawShovel += DiscoverTreasure;
+    }
 
     private void Start()
     {
@@ -39,14 +45,18 @@ public class MetalDetector : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.E))
             {
-                SpawnObject_Script = BuriedObjectBeneath.GetComponent<SpawnObject>();
-                DigScript.DiscoverTresure(BuriedObjectBeneath);
+                PAC.EmpezarCavar();
             }
         }
         else
         {
             //DigScript.ShowDigUI(false);
         }
+    }
+
+    public void DiscoverTreasure()
+    {
+        DigScript.DiscoverTresure(BuriedObjectBeneath);
     }
 
     void FixedUpdate()

@@ -7,8 +7,8 @@ public class Dig : MonoBehaviour
 {
     [SerializeField] private GameObject UI_ToActivate;
     [SerializeField] private ShowHideCursor ShowHideCursor_Script;
-    [SerializeField] private DigMeter DigMeter_Script;
-    [SerializeField] private WeightedProbability WeightedProbability_Script;
+        
+    private GameObject DigUI_Text;
 
     /*
     public void ShowDigUI(bool _show)
@@ -17,14 +17,9 @@ public class Dig : MonoBehaviour
     }*/
 
     public void DiscoverTresure(GameObject _buriedobject)
-    {
-        int _id = _buriedobject.GetComponent<SpawnObject>().ObjectID;
-
-        //Debug.Log("YOU JUST FOUND A: "+ VariableManager.instance.Tresures[_id].Name  + "!!!");            //MESSAGE
-        
-        DigMeter_Script.SetDigParameters(_buriedobject);
-        ShowHideCursor_Script.EnableDisable(false);
-        //ShowHideCursor_Script.Show();               //SHOWS CURSOR
+    {        
+        Debug.Log("YOU JUST DIGGED!!!");            //MESSAGE
+        ShowHideCursor_Script.Show();               //SHOWS CURSOR
         UI_ToActivate.SetActive(true);              //ACTIVATES DIG UI
         //DigUI.SetActive(false);//Show UI
         //Destroy(_buriedobject);        
