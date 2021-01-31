@@ -78,6 +78,7 @@ public class ShopItem : MonoBehaviour
 
     public void ExitStore()
     {
+        AudioManager_Script.play("Pop", 1);
         Shop_UI.SetActive(false);
         ShowHideCursor_Script.Hide();
     }
