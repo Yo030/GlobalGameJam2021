@@ -37,7 +37,17 @@ public class AudioManager : MonoBehaviour
 
 	void Start()
 	{
-		play("", 1);
+		
+		play("Olas", 1);
+		play("Gaviotas", 1);
+		Invoke("RandomSoundReplay", 5.56f);
+	}
+
+	private void RandomSoundReplay()
+    {
+		int _everyxsec = UnityEngine.Random.Range(9, 17);
+		play("Gaviotas", 1);
+		Invoke("RandomSoundReplay", _everyxsec);
 	}
 
 	public void play(string _nombre, float _pitch)

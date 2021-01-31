@@ -14,6 +14,8 @@ public class ShopItem : MonoBehaviour
     [SerializeField] private Battery Battery_Script;
     [SerializeField] private ShowHideCursor ShowHideCursor_Script;
     [SerializeField] private GameObject Shop_UI;
+    [Space]
+    [SerializeField] private AudioManager AudioManager_Script;
 
     [SerializeField] private int Price;
     private Button ThisButtom;
@@ -28,7 +30,8 @@ public class ShopItem : MonoBehaviour
     {
         if(VariableManager.instance.Money >= Price)
         {
-            if(_itemnum == 3 && VariableManager.instance.MaxInventorySlots == 4)
+            AudioManager_Script.play("Baught", 1);
+            if (_itemnum == 3 && VariableManager.instance.MaxInventorySlots == 4)
             {
                 ThisButtom = GetComponent<Button>();
                 ThisButtom.interactable = false;
@@ -39,6 +42,7 @@ public class ShopItem : MonoBehaviour
         }
         else
         {
+            AudioManager_Script.play("Nope", 1);
             Debug.Log("Can't Buy");
         }
     }

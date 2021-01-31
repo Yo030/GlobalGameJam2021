@@ -5,6 +5,8 @@ using UnityEngine;
 public class TradeItems : MonoBehaviour
 {
     [SerializeField] private Inventory Inventory_Script;
+    [Space]
+    [SerializeField] private AudioManager AudioManager_Script;
 
     private void OnEnable()
     {
@@ -14,6 +16,7 @@ public class TradeItems : MonoBehaviour
             {
                 VariableManager.instance.Money += GetMoney(VariableManager.instance.InventoryList[i]);
                 VariableManager.instance.InventoryList[i] = "";
+                AudioManager_Script.play("MoneyExchange", 1);
             }
         }
         Inventory_Script.ReloadSlots(0);
