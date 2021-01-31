@@ -15,6 +15,9 @@ public class PlayerAnimationController : MonoBehaviour
     public event Action OnIDLE;
 
     public bool isTesting = false;
+
+    public WalkRun WR;
+
     private void Awake()
     {
         anim = this.GetComponent<Animator>();
@@ -25,10 +28,29 @@ public class PlayerAnimationController : MonoBehaviour
         OnDeath += _OnDeath;
         OnDig += _OnDig;
         OnIDLE += _OnIDLE;
+        WR = this.GetComponentInParent<WalkRun>();
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A))
+        {
+            OnWalk?.Invoke();
+        }
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A))
+        {
+            OnStopWalk?.Invoke();
+        }
+
+        if (WR.Walking)
+        {
+            anim.SetFloat("WalkingSpeed", 1);
+        }
+        else
+        {
+            anim.SetFloat("WalkingSpeed", 2);
+        }
+
         //For test
         if (isTesting)
         {
@@ -61,6 +83,11 @@ public class PlayerAnimationController : MonoBehaviour
                 OnDeath?.Invoke();
             }
         }
+    }
+
+    public void EmpezarCavar()
+    {
+        OnWithdrawShovel?.Invoke();
     }
 
     private void _OnWalk()

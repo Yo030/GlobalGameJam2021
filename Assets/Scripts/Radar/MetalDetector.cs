@@ -22,6 +22,13 @@ public class MetalDetector : MonoBehaviour
     
     private GameObject BuriedObjectBeneath;
 
+    public PlayerAnimationController PAC;
+
+    private void OnEnable()
+    {
+        PAC.OnWithdrawShovel += DiscoverTreasure;
+    }
+
     private void Start()
     {
         ParentGameObject = gameObject.transform.parent.gameObject;
@@ -38,13 +45,18 @@ public class MetalDetector : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.E))
             {
-                DigScript.DiscoverTresure(BuriedObjectBeneath);
+                PAC.EmpezarCavar();
             }
         }
         else
         {
             //DigScript.ShowDigUI(false);
         }
+    }
+
+    public void DiscoverTreasure()
+    {
+        DigScript.DiscoverTresure(BuriedObjectBeneath);
     }
 
     void FixedUpdate()

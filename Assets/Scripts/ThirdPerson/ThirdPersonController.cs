@@ -24,6 +24,8 @@ public class ThirdPersonController : MonoBehaviour
 
     public Transform cam;
 
+    public PlayerAnimationController PAC;
+
     private void Start()
     {
         CanMove = true;
@@ -62,5 +64,9 @@ public class ThirdPersonController : MonoBehaviour
             
             PlayerController.Move(gravityVelocity * Time.deltaTime);
         }
+
+        
+        
     }
+    
 }

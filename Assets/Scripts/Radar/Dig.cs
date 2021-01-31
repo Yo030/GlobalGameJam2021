@@ -7,6 +7,7 @@ public class Dig : MonoBehaviour
 {
     [SerializeField] private GameObject UI_ToActivate;
     [SerializeField] private ShowHideCursor ShowHideCursor_Script;
+        
     private GameObject DigUI_Text;
 
     /*
