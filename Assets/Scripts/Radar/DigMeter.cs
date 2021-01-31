@@ -25,7 +25,7 @@ public class DigMeter : MonoBehaviour
     private Slider slider;
     private float pos = .5f;
     public int TimesToDig = 1;
-    private bool CanMove = true;
+    public bool CanMove = true;
     private bool SuccessfulDig;
 
     private float FillAmountPerSec;
@@ -35,16 +35,19 @@ public class DigMeter : MonoBehaviour
 
     public float OriginalBarMoveSpeed;
 
+    public Rigidbody PlayerRB;
+
     private void Awake()
     {
         WeightedProbability_Script = FindObjectOfType<WeightedProbability>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         Inventory_Script = FindObjectOfType<Inventory>();
         slider = GetComponent<Slider>();
         DecreeseSpeedBy = (BarMoveSpeed - 0.1f) / 5;
+        CanMove = true;
     }
 
     public void SetDigParameters(GameObject _buriedobject)
@@ -78,6 +81,11 @@ public class DigMeter : MonoBehaviour
             {
                 StopSlider();
             }
+            PlayerRB.isKinematic = false;
+        }
+        else
+        {
+            PlayerRB.isKinematic = true;
         }
     }
 
@@ -98,7 +106,7 @@ public class DigMeter : MonoBehaviour
         }
         if(SuccessfulDig)
         {
-            //Debug.Log("Good " + slider.value);
+            Debug.Log("Good " + slider.value);
             AudioManager_Script.play(SoundName, 1);
             BarMoveSpeed -= DecreeseSpeedBy;
             TimesToDig--;
@@ -106,7 +114,7 @@ public class DigMeter : MonoBehaviour
         else
         {
             AudioManager_Script.play("Piedra", 1);
-            //Debug.Log("Bad" + slider.value);
+            Debug.Log("Bad" + slider.value);
             Tries--;
             //TryController_Script.CheckForLives(Tries);
         }
@@ -119,7 +127,11 @@ public class DigMeter : MonoBehaviour
             AudioManager_Script.play("Found", 1);
             //Debug.Log("Tresure dug!!!");
             Debug.Log("YOU JUST FOUND A: " + CurrentTresureDiggnigName + "!!!");
-            Inventory_Script.CheckForSpaces(CurrentTresureDiggnig);
+            if(CurrentTresureDiggnig != null)
+            {
+                Inventory_Script.CheckForSpaces(CurrentTresureDiggnig);
+            }
+            
             CurrentTresureDiggnigName = null;
             Invoke("CanWalkAgain", 1f);
             return;
@@ -136,6 +148,7 @@ public class DigMeter : MonoBehaviour
     }
     private void CanWalkAgain()
     {
+        Debug.Log("CanWalkAgain");
         Destroy(CurrentTresureDiggnig);
         ShowHideCursor_Script.EnableDisable(true);
         UI_ToDeactivate.SetActive(false);              //DEACTIVATES DIG UI

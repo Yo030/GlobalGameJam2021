@@ -29,6 +29,11 @@ public class MetalDetector : MonoBehaviour
         PAC.OnWithdrawShovel += DiscoverTreasure;
     }
 
+    private void OnDisable()
+    {
+        PAC.OnWithdrawShovel -= DiscoverTreasure;
+    }
+
     private void Start()
     {
         ParentGameObject = gameObject.transform.parent.gameObject;
