@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    public float BatteryLife = 120f;
+    public float BatteryLife = 360f;
     [SerializeField] private GameObject LoseUI;
     private ThirdPersonController ThirdPersonControllerScript;
     [SerializeField] private int BatteryRechargeAmmount = 1;
