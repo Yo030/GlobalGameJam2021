@@ -13,6 +13,7 @@ public class VariableManager : MonoBehaviour
 
     [Space]
     public int Money = 0;
+    public float MaxBattery = 480;
 
     private void Awake()
     {
