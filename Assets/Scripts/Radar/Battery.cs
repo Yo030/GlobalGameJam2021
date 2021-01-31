@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    public float BatteryLife;
+    public float BatteryLife = 120f;
     [SerializeField] private GameObject LoseUI;
     private ThirdPersonController ThirdPersonControllerScript;
+    [SerializeField] private int BatteryRechargeAmmount = 1;
 
     private void Start()
     {
@@ -29,5 +30,10 @@ public class Battery : MonoBehaviour
     public void ReduceBatteryLife()
     {
         BatteryLife -= 1 * Time.deltaTime;
+    }
+
+    public void AddBatteryPower()
+    {
+        BatteryLife += BatteryRechargeAmmount;
     }
 }

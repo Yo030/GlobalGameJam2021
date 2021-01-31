@@ -12,7 +12,7 @@ public class SpawnObject : MonoBehaviour
     private void Start()
     {
         int _objecttospawn = WeightedProbability_Script.ChooseObjectInTable();
-
+        Debug.Log(_objecttospawn);
         ObjectToSpawn = VariableManager.instance.Tresures[_objecttospawn].Name;
         ObjectID = VariableManager.instance.Tresures[_objecttospawn].id;
     }
